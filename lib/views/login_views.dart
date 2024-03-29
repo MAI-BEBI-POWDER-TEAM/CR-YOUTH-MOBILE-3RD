@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_mentoring3/utils/color_theme.dart';
 import 'package:flutter_mentoring3/views/forgot_views.dart';
+import 'package:flutter_mentoring3/views/register_views.dart';
 
 class LoginPageScreen extends StatefulWidget {
   const LoginPageScreen({super.key});
@@ -129,13 +130,49 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
               ),
               SizedBox(height: 16),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'Don\'t have an account?',
-                    style: TextStyle(color: colorGrey3, fontSize: 18,
-                    fontWeight: FontWeight.w800),
+                  Icon(
+                    Icons.facebook,
+                    color: colorBlack,
+                  ),
+                  Icon(
+                    Icons.g_mobiledata,
+                    color: colorBlack,
+                    size: 42,
+                  ),
+                  Icon(
+                    Icons.apple,
+                    color: colorBlack,
                   ),
                 ],
+              ),
+              SizedBox(height: 16),
+              Center(
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const RegisterPageScreen(),
+                      ),
+                    );
+                  },
+                  child: RichText(
+                    text: TextSpan(
+                      text: 'Don\'t have an account?',
+                      style: TextStyle(color: colorBlack),
+                      children: [
+                        TextSpan(
+                          text: ' Sign Up',
+                          style: TextStyle(
+                            color: colorPrimaryPink,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
