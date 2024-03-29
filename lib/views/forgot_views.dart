@@ -10,6 +10,6 @@ class ForgotPassPageScreen extends StatefulWidget {
 class _ForgotPassPageScreenState extends State<ForgotPassPageScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold();
   }
 }

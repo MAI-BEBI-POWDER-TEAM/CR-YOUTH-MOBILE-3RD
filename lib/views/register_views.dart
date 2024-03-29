@@ -10,6 +10,6 @@ class RegisterPageScreen extends StatefulWidget {
 class _RegisterPageScreenState extends State<RegisterPageScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold();
   }
 }
