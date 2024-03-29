@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_mentoring3/utils/color_theme.dart';
+import 'package:flutter_mentoring3/views/forgot_views.dart';
 
 class LoginPageScreen extends StatefulWidget {
   const LoginPageScreen({super.key});
@@ -9,6 +12,9 @@ class LoginPageScreen extends StatefulWidget {
 }
 
 class _LoginPageScreenState extends State<LoginPageScreen> {
+  final TextEditingController _emailAddressController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,10 +47,96 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
               SizedBox(height: 16),
               Text(
                 'Enter Your Details',
-                style: TextStyle(
-                  color: colorGrey3,
-                  fontSize: 22),
-              )
+                style: TextStyle(color: colorGrey3, fontSize: 22),
+              ),
+              SizedBox(height: 30),
+              TextFormField(
+                keyboardType: TextInputType.emailAddress,
+                controller: _emailAddressController,
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.symmetric(vertical: 8),
+                  labelText: 'Email Address',
+                  labelStyle: TextStyle(
+                    color: colorGrey3,
+                  ),
+                  suffixIcon: Icon(Icons.email, color: colorGrey3),
+                ),
+              ),
+              SizedBox(height: 30),
+              TextFormField(
+                keyboardType: TextInputType.visiblePassword,
+                controller: _passwordController,
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.symmetric(vertical: 8),
+                  labelText: 'Password',
+                  labelStyle: TextStyle(
+                    color: colorGrey3,
+                  ),
+                  suffixIcon: Icon(CupertinoIcons.eye_slash, color: colorGrey3),
+                ),
+              ),
+              SizedBox(height: 8),
+              Align(
+                alignment: Alignment.topRight,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => ForgotPassPageScreen(),
+                     ),
+                    );
+                  },
+                  child: Text(
+                    'Forget Password?',
+                    textAlign: TextAlign.end,
+                    style: TextStyle(color: colorPrimaryPink, fontSize: 15),
+                  ),
+                ),
+              ),
+              SizedBox(height: 30),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Log In',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: colorPrimaryWhite,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: colorPrimaryPink,
+                    fixedSize: Size(320, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 35),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                      width: MediaQuery.of(context).size.width / 3.5,
+                      height: 1,
+                      color: colorBlack),
+                  Text(' Or Continue with '),
+                  Container(
+                      width: MediaQuery.of(context).size.width / 3.5,
+                      height: 1,
+                      color: colorBlack),
+                ],
+              ),
+              SizedBox(height: 16),
+              Row(
+                children: [
+                  Text(
+                    'Don\'t have an account?',
+                    style: TextStyle(color: colorGrey3, fontSize: 18,
+                    fontWeight: FontWeight.w800),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
