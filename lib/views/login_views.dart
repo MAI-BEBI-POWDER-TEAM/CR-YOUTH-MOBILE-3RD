@@ -30,25 +30,35 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(top: 24, left: 16, right: 16),
+          margin: EdgeInsets.only(
+            top: 24,
+            left: 16,
+            right: 16,
+          ),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Image.asset('assets/book-icon.png')),
-              SizedBox(height: 50),
+              Center(
+                child: Image.asset('assets/book-icon.png'),
+              ),
+              SizedBox(height: 30),
               Text(
                 'Welcome Back!',
                 style: TextStyle(
-                    color: colorPrimaryPink,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700),
+                  color: colorPrimaryPink,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 4),
               Text(
                 'Enter Your Details',
-                style: TextStyle(color: colorGrey3, fontSize: 22),
+                style: TextStyle(
+                  color: colorGrey3,
+                  fontSize: 20,
+                ),
               ),
               SizedBox(height: 30),
               TextFormField(
@@ -73,7 +83,10 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
                   labelStyle: TextStyle(
                     color: colorGrey3,
                   ),
-                  suffixIcon: Icon(CupertinoIcons.eye_slash, color: colorGrey3),
+                  suffixIcon: Icon(
+                    CupertinoIcons.eye_slash,
+                    color: colorGrey3,
+                  ),
                 ),
               ),
               SizedBox(height: 8),
@@ -81,8 +94,10 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
                 alignment: Alignment.topRight,
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => ForgotPassPageScreen(),
-                     ),
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => ForgotPassPageScreen(),
+                      ),
                     );
                   },
                   child: Text(
@@ -118,14 +133,16 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                      width: MediaQuery.of(context).size.width / 3.5,
-                      height: 1,
-                      color: colorBlack),
+                    width: MediaQuery.of(context).size.width / 3.5,
+                    height: 1,
+                    color: colorBlack,
+                  ),
                   Text(' Or Continue with '),
                   Container(
-                      width: MediaQuery.of(context).size.width / 3.5,
-                      height: 1,
-                      color: colorBlack),
+                    width: MediaQuery.of(context).size.width / 3.5,
+                    height: 1,
+                    color: colorBlack,
+                  ),
                 ],
               ),
               SizedBox(height: 16),

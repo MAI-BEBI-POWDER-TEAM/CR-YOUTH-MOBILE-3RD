@@ -233,7 +233,7 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 32),
+              SizedBox(height: 48),
               Center(
                 child: GestureDetector(
                   onTap: () {
