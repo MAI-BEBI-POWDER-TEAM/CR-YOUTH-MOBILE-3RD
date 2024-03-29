@@ -78,6 +78,8 @@ class _ForgotPassPageScreenState extends State<ForgotPassPageScreen> {
                   child: Text(
                     'Submit',
                     style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
                       color: colorPrimaryWhite,
                     ),
                   ),

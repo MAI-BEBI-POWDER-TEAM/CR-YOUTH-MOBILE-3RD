@@ -182,6 +182,8 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
                   child: Text(
                     'Sign Up',
                     style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
                       color: colorPrimaryWhite,
                     ),
                   ),
@@ -233,7 +235,7 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 48),
+              SizedBox(height: 32),
               Center(
                 child: GestureDetector(
                   onTap: () {
