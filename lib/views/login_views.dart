@@ -13,6 +13,7 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Login',
           style: TextStyle(
@@ -32,12 +33,18 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
               SizedBox(height: 50),
               Text(
                 'Welcome Back!',
-                style: TextStyle(color: colorPrimaryPink,
-                fontSize: 30,
-                fontWeight: FontWeight.w700),
+                style: TextStyle(
+                    color: colorPrimaryPink,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w700),
               ),
               SizedBox(height: 16),
-              
+              Text(
+                'Enter Your Details',
+                style: TextStyle(
+                  color: colorGrey3,
+                  fontSize: 22),
+              )
             ],
           ),
         ),
