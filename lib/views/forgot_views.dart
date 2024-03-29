@@ -59,6 +59,7 @@ class _ForgotPassPageScreenState extends State<ForgotPassPageScreen> {
               SizedBox(height: 96),
               TextFormField(
                 controller: _forgetPassController,
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.symmetric(vertical: 8),
                   labelText: 'Email Address / Mobile Number',
@@ -84,7 +85,7 @@ class _ForgotPassPageScreenState extends State<ForgotPassPageScreen> {
                     backgroundColor: colorPrimaryPink,
                     fixedSize: Size(320, 45),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(24),
                     ),
                   ),
                 ),
