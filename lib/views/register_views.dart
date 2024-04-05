@@ -29,13 +29,11 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
           ),
         ),
       ),
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        margin: EdgeInsets.symmetric(horizontal: 24),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 24),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -46,7 +44,6 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: 4),
               Text(
                 'Enter Your Details',
                 style: TextStyle(
@@ -54,7 +51,6 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
                   color: colorGrey3,
                 ),
               ),
-              SizedBox(height: 16),
               TextFormField(
                 controller: _usernameController,
                 keyboardType: TextInputType.text,
@@ -73,7 +69,6 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
               TextFormField(
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
@@ -92,7 +87,6 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
               TextFormField(
                 controller: _countryController,
                 keyboardType: TextInputType.text,
@@ -111,7 +105,6 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
               TextFormField(
                 controller: _dateOfBirthController,
                 decoration: InputDecoration(
@@ -129,7 +122,6 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
               TextFormField(
                 controller: _phoneController,
                 keyboardType: TextInputType.phone,
@@ -148,7 +140,6 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
               TextFormField(
                 controller: _passwordController,
                 keyboardType: TextInputType.visiblePassword,
@@ -175,7 +166,7 @@ class _RegisterPageScreenState extends State<RegisterPageScreen> {
                   color: colorPrimaryPink,
                 ),
               ),
-              SizedBox(height: 24),
+              SizedBox(height: 16),
               Center(
                 child: ElevatedButton(
                   onPressed: () {},

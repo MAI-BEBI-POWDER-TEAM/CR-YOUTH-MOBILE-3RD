@@ -43,7 +43,7 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
               Center(
                 child: Image.asset('assets/book-icon.png'),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 24),
               Text(
                 'Welcome Back!',
                 style: TextStyle(
@@ -52,7 +52,6 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              SizedBox(height: 4),
               Text(
                 'Enter Your Details',
                 style: TextStyle(
@@ -60,7 +59,7 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
                   fontSize: 20,
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 24),
               TextFormField(
                 keyboardType: TextInputType.emailAddress,
                 controller: _emailAddressController,
@@ -73,7 +72,6 @@ class _LoginPageScreenState extends State<LoginPageScreen> {
                   suffixIcon: Icon(Icons.email, color: colorGrey3),
                 ),
               ),
-              SizedBox(height: 30),
               TextFormField(
                 keyboardType: TextInputType.visiblePassword,
                 controller: _passwordController,
